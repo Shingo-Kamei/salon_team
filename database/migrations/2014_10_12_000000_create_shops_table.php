@@ -15,9 +15,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->integer('admin_id')->primary();
-            $table->interger('shop_id')->primary();
-            $table->string('email', 254)->unique();
-            $table->string('password', 128);
+            $table->integer('name_id')->primary();
+            $table->string('shop_name', 100);
             $table->string('detail',1000);
             $table->timestamps();
             $table->datetime('created_at');
